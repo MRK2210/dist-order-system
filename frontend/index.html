@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kothari Distributor Orders</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>Kothari Distributor</h2>
+
+<label>Shop Name</label>
+<input type="text" id="shopName" placeholder="Enter shop name">
+
+<label>Mobile Number</label>
+<input type="text" id="mobile" placeholder="Enter mobile number">
+
+<h3>Select Products</h3>
+
+<div class="product">
+    <span>Rice (₹50/kg)</span>
+    <input type="number" id="rice" min="0" value="0">
+</div>
+
+<div class="product">
+    <span>Sugar (₹45/kg)</span>
+    <input type="number" id="sugar" min="0" value="0">
+</div>
+
+<div class="product">
+    <span>Oil (₹120)</span>
+    <input type="number" id="oil" min="0" value="0">
+</div>
+
+<button type="button" onclick="placeOrder()">Place Order</button>
+<script src="script.js"></script>
+
+</body>
+</html>

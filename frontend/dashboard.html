@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Orders Dashboard</title>
+</head>
+
+<body>
+
+<h2>Distributor Orders</h2>
+
+<table border="1">
+<thead>
+<tr>
+<th>Shop</th>
+<th>Mobile</th>
+<th>Rice</th>
+<th>Sugar</th>
+<th>Oil</th>
+<th>Total</th>
+</tr>
+</thead>
+
+<tbody id="ordersTable"></tbody>
+
+</table>
+
+<script>
+
+async function loadOrders(){
+
+const response = await fetch("http://localhost:7071/api/getorders");
+const orders = await response.json();
+
+const table = document.getElementById("ordersTable");
+
+orders.forEach(order => {
+
+const row = `
+<tr>
+<td>${order.shopName}</td>
+<td>${order.mobile}</td>
+<td>${order.rice}</td>
+<td>${order.sugar}</td>
+<td>${order.oil}</td>
+<td>${order.totalAmount}</td>
+</tr>
+`;
+
+table.innerHTML += row;
+
+});
+
+}
+
+loadOrders();
+
+</script>
+
+</body>
+</html>
