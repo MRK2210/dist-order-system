@@ -10,9 +10,10 @@ async function placeOrder() {
     const order = {
         shopName,
         mobile,
-        rice,
-        sugar,
-        oil
+        lassi,
+        Mathha,
+        buttermilk
+        
     };
 
     console.log("Sending order:", order);
