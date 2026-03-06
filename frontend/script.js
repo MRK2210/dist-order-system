@@ -3,9 +3,9 @@ async function placeOrder() {
     const shopName = document.getElementById("shopName").value;
     const mobile = document.getElementById("mobile").value;
 
-    const rice = Number(document.getElementById("rice").value);
-    const sugar = Number(document.getElementById("sugar").value);
-    const oil = Number(document.getElementById("oil").value);
+    const rice = Number(document.getElementById("Lassi").value);
+    const sugar = Number(document.getElementById("Mattha").value);
+    const oil = Number(document.getElementById("ButterMilk").value);
 
     const order = {
         shopName,

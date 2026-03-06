@@ -11,9 +11,9 @@ app.storageQueue('processorder', {
         const order = message;
 
         const total =
-            (order.rice * 50) +
-            (order.sugar * 45) +
-            (order.oil * 120);
+            (order.Lassi * 35) +
+            (order.Mattha * 20) +
+            (order.ButterMilk *22);
 
         context.log("Processing order:", order);
 
@@ -51,9 +51,10 @@ New Order Received
 Shop: ${order.shopName}
 Mobile: ${order.mobile}
 
-Rice: ${order.rice}
-Sugar: ${order.sugar}
-Oil: ${order.oil}
+Lassi: ${order.lassi}
+Mattha: ${order.Mattha}
+Buttermilk: ${order.buttermilk}
+
 
 Total Amount: ₹${total}
 Order Time: ${new Date().toLocaleString()}
